@@ -1,0 +1,27 @@
+.main{
+    background-image: url(img1_form.jpg);
+            background-repeat:no-repeat ;
+            background-size: cover
+}
+#id{
+    width: 400px;
+    height: 350px;
+    background-color: rgb(68, 154, 211);
+    border-radius: 20px;
+    border: 5px solid black;
+    float:left;
+    margin: 70px;
+    padding: 40px;
+    font-size: 20px;
+    color: black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+.font{
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   background-color: yellow;
+    font-weight: bolder;
+    color: rgb(77, 130, 198);
+    width: 500px;
+    height: 60px;
+}

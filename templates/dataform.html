@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>students data</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body class="main"><center>
+    <h1 class="font"><u>Student Enquiry Form</u></h1>
+    <form action="{% url 'save' %}" method="POST" class="form">
+        {% csrf_token %}
+        <fieldset id="id"><legend style="font-size: 25px; color:black; border: 1px solid yellow; background-color: yellow;">Student Information</legend>
+        Name:<input type="text" name="name" list="suggestion" placeholder="Enter Your Name"id="sname"><br><br>
+        Email:<input type="email" name="email" list="suggestion" placeholder="Enter Your Email"id="semail"><br><br>
+        Course:<input type="text" name="course" list="suggestion" placeholder="Enter Your Course" id="scourse"><br><br>
+        Joining Date:<input type="date" name="joiningdate" list="suggestion" placeholder="Enter Your Joining Date" id="sjoin"><br><br>
+        Duration:<input type="text" name="duration" list="suggestion" placeholder="Enter Your Course Duration" id="sduration"><br><br>
+        Roll No:<input type="number" name="rollno" list="suggestion" placeholder="Enter Your Roll No." id="srollno"><br><br>
+    </fieldset>
+    <fieldset id="id" class="id1"><legend style="font-size: 25px; color:black; border: 1px solid yellow; background-color: yellow;">Attendance</legend>
+        Date:<input type="date" name="date" list="suggestion" placeholder="Enter Date" id="sdate"><br><br>
+        Topic:<input type="text" name="topic" list="suggestion" placeholder="Enter Today's Topic" id="stopic"><br><br>
+        In-Time:<input type="time" name="intime" list="suggestion" placeholder="Enter In-Time" id="sintime"><br><br>
+        Out-Time:<input type="time" name="outtime" list="suggestion" placeholder="Enter Out-Time" id="souttime"><br><br>
+        Feedback:<input type="text" name="feedback" list="suggestion" placeholder="Enter Your Feedback" id="sfeedback"><br><br>
+        <button type="submit" value="submit" style="border: 2px solid red; background-color: red; width: 60px; height: 30px;">Submit</button>
+    </fieldset>
+    </form></center><br>
+    <marquee behavior="alternate" style="font-size: 50px; height: 60px; color: black; background-color: lightseagreen;"> Designed By Sejal Shahu</marquee><br><br>
+</body>
+<script>
+    $(document).ready(function(){
+        $("#id").click(function(){
+            $("#id").css("background-color","lightgreen");
+           
+        });
+        $("#id").mouseleave(function(){
+            $("#id").css("background-color","skyblue");
+        });
+        
+    })
+    $(document).ready(function(){
+        $(".id1").click(function(){
+            $(".id1").css("background-color","lightgreen");
+           
+        });
+        $(".id1").mouseleave(function(){
+            $(".id1").css("background-color","skyblue");
+        });
+        
+    })
+    $(document).ready(function()
+{
+    $("#sname,#semail,#scourse,#sjoin,#sduration,#srollno,#sdate,#stopic,#sintime,#souttime,#sfeedback").focus(function(){
+        $(this).css("background-color","pink");
+    });
+   $("#sname,#semail,#scourse,#sjoin,#sduration,#srollno,#sdate,#stopic,#sintime,#souttime,#sfeedback").blur(function(){      //use for original color
+        $(this).css("background-color","");
+    });
+})
+</script>
+</html>
